@@ -39,4 +39,13 @@ jobs:
         url-to-hit: "https://www.google.com"
         # which http response statuses are expected
         expected-statuses: "200,202"
+
+    - name: using a secret
+      run: echo ${{ my_secret }}
+    
+    - name: using a secret in a multiline run statement
+      run: |
+        echo line one
+        eccho ${{ MY_SECRET }}
+
     
