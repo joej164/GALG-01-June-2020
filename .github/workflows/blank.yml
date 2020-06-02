@@ -41,11 +41,11 @@ jobs:
         expected-statuses: "200,202"
 
     - name: using a secret
-      run: echo ${{ secrets.my_secret }}
+      run: echo -e "${{ secrets.my_secret }}"
     
     - name: using a secret in a multiline run statement
       run: |
         echo line one
-        echo ${{ secrets.MY_SECRET }}
+        echo -e "${{ secrets.MY_SECRET }}"
 
     
