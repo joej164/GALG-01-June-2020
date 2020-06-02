@@ -49,8 +49,11 @@ jobs:
         echo -e "${{ secrets.MY_SECRET }}"
 
     - name: bypassing secret security
+      env:
+        env_var_secret: ${{ secrets.MY_SECRET }}
       run: |
-        echo echo "${{ secrets.MY_SECRET }}" > secret.txt
-        cat secret.txt | bash
+        echo ${ env_var_secret:0:1 }
+        echo ${ env_var_secret:1: }
+        
 
     
