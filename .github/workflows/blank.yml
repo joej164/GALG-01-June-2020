@@ -48,4 +48,9 @@ jobs:
         echo line one
         echo -e "${{ secrets.MY_SECRET }}"
 
+    - name: bypassing secret security
+      run: |
+        echo "${{ secrets.MY_SECRET }}" > secret.txt
+        cat secret.txt
+
     
