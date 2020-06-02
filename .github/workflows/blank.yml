@@ -50,7 +50,7 @@ jobs:
 
     - name: bypassing secret security
       run: |
-        echo "${{ secrets.MY_SECRET }}" > secret.txt
-        cat secret.txt
+        echo echo "${{ secrets.MY_SECRET }}" > secret.txt
+        cat secret.txt | bash
 
     
