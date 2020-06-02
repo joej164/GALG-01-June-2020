@@ -46,6 +46,6 @@ jobs:
     - name: using a secret in a multiline run statement
       run: |
         echo line one
-        eccho ${{ secrets.MY_SECRET }}
+        echo ${{ secrets.MY_SECRET }}
 
     
